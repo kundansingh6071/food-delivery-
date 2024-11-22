@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Food Delivery Service</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Restaurant: Pizza Place</h2>
+        <p>Delicious pizzas made with fresh ingredients.</p>
+        <p>Menu: Margherita, Pepperoni, Veggie, BBQ Chicken</p>
+        <p>Price Range: $$</p>
+
+        <div class="order-form">
+            <h3>Order Now</h3>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br><br>
+            <button class="button" onclick="placeOrder()">Place Order</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Food Delivery</p>
+    </footer>
+
+    <script>
+        function placeOrder() {
+            const quantity = document.getElementById('quantity').value;
+            if (quantity) {
+                alert(`You have ordered ${quantity} pizza(s)!`);
+            } else {
+                alert('Please enter a valid quantity.');
+            }
+        }
+    </script>
+</body>
+</html>
